@@ -1,27 +1,37 @@
 #container {
-  text-align: center;
-
+  
+  margin: 10%; 
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
+  
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+
+
+#a {
+  
+  color: rgb(22, 159, 84);
+  font-size: 15px;  
+  
+
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+#colorText{
+  color: rgb(8, 67, 168);
 }
 
-#container a {
-  text-decoration: none;
+ion-input{
+  color: rgb(8, 67, 168);
+
 }
+
+
+
+
+
+
+
+

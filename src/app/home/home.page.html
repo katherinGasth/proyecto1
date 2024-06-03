@@ -1,20 +1,46 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+
+<ion-header [translucent]="true" >
+  <ion-toolbar color="success">
+    <ion-title id="a">Skeleton</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
+  
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-title id="colorText">Bienvenido!</ion-title>
+    <br>
+    <p id="colorText">usuario: {{nombreUsuario}}</p>
+    <h1 id="colorText">Informaciòn adicional</h1>
+
+
+    <form [formGroup]="formularioDatosUsusario" (ngSubmit)="enviar()">
+      <ion-list>
+        <ion-list>
+          <ion-item>
+            <ion-input class="" label="Nombre" placeholder="Ingrese nombre" id="nombre" 
+            [ngClass]="{'animate__animated animate__backInLeft animate__delay-1s': isReset}" formControlName="nombre"></ion-input>
+          </ion-item>
+      
+          <ion-item>
+            <ion-input class="" id="b" label="Apellido" placeholder="Ingrese Apellido" 
+            id="apellido" [ngClass]="{'animate__animated animate__backInLeft animate__delay-1s': isReset}" formControlName="apellido"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input label="Fecha Nacimiento"  type="date" id="fechaNacimiento" formControlName="fechaNacimiento"></ion-input>
+          </ion-item>
+
+        </ion-list>
+      </ion-list>
+      <ion-button class="btn btn-primary" type="reset" (click)="reset()">limpiar</ion-button>
+      <ion-button class="btn btn-primary" type="submit" >Enviar</ion-button>
+    </form>
+    <br>
+    
   </div>
 </ion-content>
+
+<ion-toolbar color="light" >
+  <ion-title id="a">realizado por Katherin G.</ion-title>
+</ion-toolbar>

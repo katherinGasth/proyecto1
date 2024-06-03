@@ -1,0 +1,34 @@
+
+
+<ion-content>
+
+  <ion-title class="animate__animated animate__flip animate__delay-6s">Skeleton App</ion-title>
+
+  <h1>Aquí comienza todo</h1>
+  
+
+  <h2>Bienvenido!</h2>
+
+  <form [formGroup]="formularioLogin" (ngSubmit)="enviar()">
+    
+    <ion-input  label="usuario" label-placement="floating" placeholder="Ingresar usuario" id="usuario" 
+    fill="solid" type="usuario" formControlName="usuario"></ion-input>
+    <ion-item-divider class="text-danger" *ngIf="hasError('usuario', 'required')">Usuario Requerido</ion-item-divider>
+    <ion-item-divider class="text-danger" *ngIf="hasError('usuario', 'minlength')">Minimo Requerido  3 caracteres</ion-item-divider>
+    <ion-item-divider class="text-danger" *ngIf="hasError('usuario', 'maxlength')">Máximo Requerido 8 caracteres</ion-item-divider>
+
+
+    <ion-input label="Password" label-placement="floating"  placeholder="Ingresar password" id="password" 
+    fill="solid" type="password" formControlName="password"></ion-input>
+    <ion-item-divider class="text-danger" *ngIf="hasError('password', 'required')">Contraseña requerida</ion-item-divider>
+    
+
+    <ion-button expand="full" type="submit">Ingresar</ion-button>
+
+    <p>obten una cuenta gratis</p>
+  </form>
+
+    
+
+
+</ion-content>
